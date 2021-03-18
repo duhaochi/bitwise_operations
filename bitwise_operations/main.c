@@ -6,14 +6,19 @@
 //
 
 #include <stdio.h>
+#include <math.h>
+
+
 void onoffv1(void);
 void onoffv2(void);
 void onoffv3(void);
+void onoffv4(void);
 int main(int argc, const char * argv[]) {
     // insert code here...
     //onoffv1();
     //onoffv2();
-    onoffv3();
+    //onoffv3();
+    onoffv4();
     return 0;
 }
 
@@ -81,14 +86,14 @@ void onoffv2(){
 
 void onoffv3(){
     
-    //now instead of setting on and off using decimal numbers we are gonna use binaray representations
+    //now instead of setting on and off using decimal numbers we are gonna use binaray representations which is easier on the eye
     
     //flags is a size 4byte (unsigned) integer
     unsigned int flags;
     //turn first switch on
-    flags = 0b1; // 00000001
+    //flags = 0b1; // 00000001
     //turn second on
-    flags = 0b10; // 00000010
+    //flags = 0b10; // 00000010
     //thrid....
     flags = 0b100; // 00000100
     //all
@@ -101,11 +106,23 @@ void onoffv3(){
     if ((flags & 0b01) != 0){
         printf("2nd feature is enabled\n");
     }
-    if ((flags & 0b001) != 0){
+    if ((flags & 0b100) != 0){
         printf("3nd feature is enabled\n");
     }
     if ((flags & 7) == 7){
         printf("all features are enabled\n");
     }
     
+}
+
+//wow I defined a MACRO, cheers
+#define POWS(X, Y) Y=pow(2, X)
+//        ^            |_________function body, since MACRO can't return values I have to pass in Y as a reference holder
+//        |______function decl
+
+void onoffv4(){
+    unsigned int flag;
+    POWS(10, flag);
+    printf("%d\n", flag);
+    //even better we gonna set a micro
 }
