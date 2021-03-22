@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <math.h>
 
+#include "bit_shifting.h"
 
 void onoffv1(void);
 void onoffv2(void);
@@ -15,10 +16,25 @@ void onoffv3(void);
 void onoffv4(void);
 int main(int argc, const char * argv[]) {
     // insert code here...
-    //onoffv1();
-    //onoffv2();
-    //onoffv3();
-    onoffv4();
+    
+    //here is an example of [signed] right shift
+    printf("[signed] right shift\n");
+    unsigned int testNUM = 128;
+    print_binary(testNUM);
+    testNUM = Lshift_s(testNUM, 24);
+    testNUM = Rshift_s(testNUM, 24);
+    
+    //___________________________________________
+    printf("\n");
+    
+    //here is an example of [unsigned] right shift
+    printf("[unsigned] right shift\n");
+    unsigned int testUnsigned = 128;
+    print_binary(testUnsigned);
+    testUnsigned = Lshift_s(testUnsigned, 24);
+    testUnsigned = Rshift_u(testUnsigned, 24);
+    //___________________________________________
+    
     return 0;
 }
 

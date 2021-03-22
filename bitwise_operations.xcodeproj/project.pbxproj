@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F84838112608DD4900B60711 /* bit_shifting.c in Sources */ = {isa = PBXBuildFile; fileRef = F84838102608DD4900B60711 /* bit_shifting.c */; };
 		F8FF5202260376F000A4FF03 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F8FF5201260376F000A4FF03 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F848380F2608DD4900B60711 /* bit_shifting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bit_shifting.h; sourceTree = "<group>"; };
+		F84838102608DD4900B60711 /* bit_shifting.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_shifting.c; sourceTree = "<group>"; };
 		F8FF51FE260376F000A4FF03 /* bitwise_operations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bitwise_operations; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FF5201260376F000A4FF03 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +60,8 @@
 		F8FF5200260376F000A4FF03 /* bitwise_operations */ = {
 			isa = PBXGroup;
 			children = (
+				F848380F2608DD4900B60711 /* bit_shifting.h */,
+				F84838102608DD4900B60711 /* bit_shifting.c */,
 				F8FF5201260376F000A4FF03 /* main.c */,
 			);
 			path = bitwise_operations;
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FF5202260376F000A4FF03 /* main.c in Sources */,
+				F84838112608DD4900B60711 /* bit_shifting.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
